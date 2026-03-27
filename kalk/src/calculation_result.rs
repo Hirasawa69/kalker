@@ -111,6 +111,12 @@ impl CalculationResult {
     }
 }
 
+impl CalculationResult {
+    pub fn value(&self) -> &KalkValue {
+        &self.value
+    }
+}
+
 impl std::fmt::Display for CalculationResult {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{}", self.value)
